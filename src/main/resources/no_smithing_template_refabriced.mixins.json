@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.dilideguazi.no_smithing_template_refabriced.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "SmithingMenuMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
