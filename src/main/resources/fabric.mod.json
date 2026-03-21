@@ -7,7 +7,6 @@
   "authors": [],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/no_smithing_template_refabriced/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
