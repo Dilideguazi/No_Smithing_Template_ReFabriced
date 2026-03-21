@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "no_smithing_template_refabriced",
+  "version": "${version}",
+  "name": "No Smithing Template ReFabriced 1206",
+  "description": "no_smithing_template.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.dilideguazi.no_smithing_template_refabriced.client.No_smithing_template_refabricedClient"
+    ],
+    "main": [
+      "org.dilideguazi.no_smithing_template_refabriced.No_smithing_template_refabriced"
+    ]
+  },
+  "mixins": [
+    "no_smithing_template_refabriced.mixins.json",
+    {
+      "config": "no_smithing_template_refabriced.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
