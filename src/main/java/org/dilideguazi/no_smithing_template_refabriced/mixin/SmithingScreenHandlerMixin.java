@@ -39,7 +39,7 @@ public abstract class SmithingScreenHandlerMixin extends ForgingScreenHandler {
 
         if (template.isEmpty()
                 && (Config.isTemplateRequired(base) || Config.isTemplateRequired(resultStack))
-                && resultStack.isItemEnabled(this.world.getEnabledFeatures())) {
+                || !resultStack.isItemEnabled(this.world.getEnabledFeatures())) {
             this.output.setLastRecipe(null);
             this.output.setStack(0, ItemStack.EMPTY);
         }
