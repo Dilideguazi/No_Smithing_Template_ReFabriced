@@ -4,8 +4,11 @@
   "version": "${version}",
   "name": "No Smithing Template ReFabriced 1211",
   "description": "no_smithing_template.",
-  "authors": [],
-  "contact": {},
+  "authors": ["Dilideguazi", "mizi"],
+  "contact": {
+    "sources": "https://github.com/Dilideguazi/No_Smithing_Template_ReFabriced",
+    "issues": "https://github.com/Dilideguazi/No_Smithing_Template_ReFabriced/issues"
+  },
   "license": "All-Rights-Reserved",
   "environment": "*",
   "entrypoints": {
