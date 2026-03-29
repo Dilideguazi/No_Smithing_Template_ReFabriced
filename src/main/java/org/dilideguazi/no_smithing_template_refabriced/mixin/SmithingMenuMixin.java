@@ -6,7 +6,6 @@ import net.minecraft.recipe.SmithingRecipe;
 import net.minecraft.screen.ForgingScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.SmithingScreenHandler;
-import net.minecraft.screen.slot.ForgingSlotsManager;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.world.World;
 import org.dilideguazi.no_smithing_template_refabriced.Config;
@@ -36,16 +35,6 @@ public abstract class SmithingMenuMixin extends ForgingScreenHandler {
     @SuppressWarnings("ConstantConditions")
     public SmithingMenuMixin() {
         super(null, 0, null, ScreenHandlerContext.EMPTY);
-    }
-
-    @Inject(method = "getForgingSlotsManager", at = @At("HEAD"), cancellable = true)
-    protected void onCreateInputSlotDefinitions(CallbackInfoReturnable<ForgingSlotsManager> cir) {
-        cir.setReturnValue(ForgingSlotsManager.create()
-                .input(0, 8, 48, (stack) -> true)
-                .input(1, 26, 48, (stack) -> this.recipes.stream().anyMatch((recipe) -> recipe.testBase(stack)))
-                .input(2, 44, 48, (stack) -> this.recipes.stream().anyMatch((recipe) -> recipe.testAddition(stack)))
-                .output(3, 98, 48)
-                .build());
     }
 
     @Inject(method = "canTakeOutput", at = @At("HEAD"), cancellable = true)
