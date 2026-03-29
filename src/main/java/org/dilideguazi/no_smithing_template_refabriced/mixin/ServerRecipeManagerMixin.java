@@ -25,6 +25,7 @@ public class ServerRecipeManagerMixin {
             for (RecipeEntry<?> recipe : this.preparedRecipes.recipes()) {
                 if (recipe.value() instanceof SmithingTransformRecipe
                         && input instanceof SmithingRecipeInput
+                        && ((SmithingRecipeInput) input).template().isEmpty()
                         && ((SmithingTransformRecipe) recipe.value()).base()
                         .test(((SmithingRecipeInput) input).base())
                         && Ingredient.matches(((SmithingTransformRecipe) recipe.value()).addition(),
