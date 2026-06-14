@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "org.dilideguazi.no_smithing_template_refabriced.mixin.client",
+  "package": "org.dilideguazi.no_smithing_template_refabriced.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
   ],
